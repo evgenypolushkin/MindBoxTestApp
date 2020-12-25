@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MindboxTestApp/bin
+/MindboxTestApp/obj
+/MindboxTestApp.Core/bin
+/MindboxTestApp.Core/obj
+/Tests/MindboxTestApp.Core.Tests/bin/Debug/netcoreapp3.1
+/Tests/MindboxTestApp.Core.Tests/obj
+*.db
+/MindboxTestApp/Properties/PublishProfiles
+/.vs/MindboxTestApp
