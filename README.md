@@ -1,6 +1,6 @@
 ﻿# MindBoxTestApp
 
-Задание №1.
+__Задание №1.__
 
 Решение использует SQLite.
 Скомпилированную версию (self-hosted/contained) можно скачать по [ссылке](https://drive.google.com/file/d/1ttjYJtMmJRQuG-nwJbqMwzp_iKZ_3IrN/view?usp=sharing).
@@ -26,6 +26,7 @@
 	* MapFunction - функция, которая используя TEntityAddDto создаст новый экзепляр класса TEntity
 	* figureType - значение перечисления FigureType, соответствующее новой фигуре.
 	* figureService - объект сервиса FigureService
+6. Покрыть тестами валидацию DTO, мэппинг, вычисление площади и CRUD операции с БД.
 
-Задание №2
+__Задание №2__
 Решение по [ссылке](https://www.db-fiddle.com/f/jwYkvsHTAPG1L5TtjMLmek/1).
