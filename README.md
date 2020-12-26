@@ -1,1 +1,31 @@
-# MindBoxTestApp
+﻿# MindBoxTestApp
+
+Задание №1.
+
+Решение использует SQLite.
+Скомпилированную версию (self-hosted/contained) можно скачать по [ссылке](https://drive.google.com/file/d/1ttjYJtMmJRQuG-nwJbqMwzp_iKZ_3IrN/view?usp=sharing).
+
+Принятые решения и допущения, что можно улучшить:
+1. Unit-тестами покрыто частично. Можно было бы сделать:
+	* Тесты на валидацию DTO
+	* Интеграционные на сохранение/чтение из БД
+	* Тесты на сервис FigureService
+2. Сейчас площадь вычисляется одним методом используя определенные параметры фигуры. Можно было бы сделать:
+	* Расширить сущности дополнительными возможными параметрами, ввести стратегии расчета плозади исходя из них
+3. Примеры вызовов вы можете найти на странице swagger после запуска. По умолчанию: http://localhost:5000/swagger
+
+Для добавления новой фигуры необходимо:
+1. Добавить сущность ее описывающую и унаследовать от GeometricFigure
+2. Добавить соответствующее DTO, унаследовать от AddFigureRequestBaseDto, реализовать валидацию данных в нем
+3. Добавить DbSet в ApplicationDbContext, сформировать миграцию
+4. Добавить новое значение в перечислении FigureType
+5. Добавить в файле FigureMappings вызов функции, которая принимает следующее:
+	* ConfigureMapsterFigureMappings<TEntity, TEntityAddDto>(MapFunction, figureType, figureService), где
+	* TEntity - класс описывающий новую фигуру
+	* TEntityAddDto - класс DTO создания фигуры
+	* MapFunction - функция, которая используя TEntityAddDto создаст новый экзепляр класса TEntity
+	* figureType - значение перечисления FigureType, соответствующее новой фигуре.
+	* figureService - объект сервиса FigureService
+
+Задание №2
+Решение по [ссылке](https://www.db-fiddle.com/f/jwYkvsHTAPG1L5TtjMLmek/1).
